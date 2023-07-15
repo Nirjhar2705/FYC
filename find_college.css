@@ -1,5 +1,5 @@
 body{
-    margin: 20px;
+    margin: 10px;
 }
 
 button {
@@ -10,12 +10,12 @@ button {
     border-radius: 14.5px;
     padding: 3px 5px 3px 5px;
     box-shadow: 3px 3px 3px rgba(0,0,0,0.12), -1px -1px 1px rgba(0,0,0,0.2);
-    width: 12%;
+    width: 20%;
     margin-left: 15px;
 }
 
 #list{
-    width: 80%;
+    width: 100%;
     height: auto;
     background-color: white;
     border-radius: 10px;
