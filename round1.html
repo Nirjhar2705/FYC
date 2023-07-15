@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Round 1</title>
+    <style>
+        #numInput {
+            width: 80%;
+        }
+    </style>
+    <link rel="stylesheet" href="find_college.css">
+</head>
+<body>
+    <h1>
+        Round 1
+    </h1>
+    <br>
+    <input type="number" id="numInput" placeholder="enter your rank">
+    <button onclick="displaycolleges()">Submit</button>
+    <br>
+    <p>*The following datas are based on the previous year datas</p>
+    <div id="list">
+    <ol id="nameList"></ol>
+    </div>
+    <script>
+        let names = [
+            {name: "Jadavpur University CSE", value: 66},
+            {name: "Jadavpur University ETCE", value: 214},
+            {name: "Jadavpur University IT", value: 210},
+            {name: "Jadavpur University EE", value: 365},
+            {name: "Jadavpur University IEE", value: 412},
+            {name: "Jadavpur University ME", value: 591},
+            {name: "Jadavpur University Chemical E", value: 815},
+            {name: "Jadavpur University Production E", value: 894},
+            {name: "Jadavpur University Power E", value: 1201},
+            {name: "Jadavpur University MME", value: 1173},
+            {name: "Jadavpur University Civil E", value: 1214},
+            {name: "Jadavpur University Construction E", value: 1618},
+            {name: "Jadavpur University Food Tech", value: 1782},
+            {name: "Jadavpur University Printing E", value: 1788},
+            {name: "Calcutta University CSE", value: 537},
+            {name: "Calcutta University IT", value: 741},
+            {name: "Calcutta University ECE", value: 952},
+            {name: "Calcutta University EE", value: 1186},
+            {name: "Calcutta Universit IEE", value: 1324},
+            {name: "Calcutta University Chemical E", value: 1826},
+            {name: "KGEC CSE", value: 1114},
+            {name: "KGEC IT", value: 1539},
+            {name: "KGEC ECE", value: 1768},
+            {name: "KGEC EE", value: 2197},
+            {name: "JGEC CSE", value: 1784},
+            {name: "JGEC IT", value: 2318},
+            {name: "JGEC ECE", value: 2693}
+        ];
+
+        function displaycolleges() {
+            let input = document.getElementById("numInput").value;
+            let nameList = document.getElementById("nameList");
+            nameList.innerHTML = "";
+            for (let i = 0; i < names.length; i++) {
+                if (names[i].value > input) {
+                    let listItem = document.createElement("li");
+                    listItem.innerHTML = names[i].name;
+                    nameList.appendChild(listItem);
+                }
+            }
+        }
+    </script>
+</body>
+</html> 
+
